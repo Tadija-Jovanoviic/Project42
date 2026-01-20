@@ -17,6 +17,9 @@ int main1()
 		}
 		int prost = 1;
 		j = 2;
+		// ovo ti se sigurno ne kompajlira
+		// treba: while (j <= sumaCifara / 2 && prost != 0)
+		// operator AND (&&) mora da bude odvojen
 		while (j <= sumaCifara / 2 &&prost != 0)
 		{
 			if (sumaCifara % j == 0)
@@ -24,6 +27,7 @@ int main1()
 			j++;
 		}
 		if (prost)
+		// ovo ti je pobeglo u desno, treba lepo da se formatira	
 						printf("Suma cifara je prost broj.\n");
 		else
 			printf("Suma cifara nije prost broj.\n");	
