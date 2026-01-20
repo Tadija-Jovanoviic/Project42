@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="prvii.c">
+    <ClCompile Include="prvi13.9.22.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
