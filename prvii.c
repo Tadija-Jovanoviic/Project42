@@ -1,3 +1,5 @@
+// vidi komentar za https://github.com/Tadija-Jovanoviic/Project42/blob/master/prvi1.2.24.c
+
 #include<stdio.h>
 int main()
 {
