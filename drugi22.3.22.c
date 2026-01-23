@@ -1,42 +1,31 @@
-#include <stdio.h>
-int main()
+#include "stdio.h"
+void main()
 {
-	int prvi, drugi, rezNiz[100], j, i = 0;
-	FILE* fprvi = fopen("prvi.txt", "r");
-	FILE* fdrugi = fopen("drugi.txt", "r");
-	while (!feof(fprvi) || !feof(fdrugi))
+	int A[50], N, x, y, z, i, j;
+	printf("Unesite broj elemenata niza: ");
+	scanf_s("%d", &N);
+	printf("Unesite elemente niza:\n");
+	for (i = 0; i < N; i++)
+		scanf_s("%d", &A[i]);
+	printf("Unesite redom vrednosti za x, y i z:\n");
+	scanf_s("%d%d%d", &x, &y, &z);
+	i = 0;
+	while (i < N)
 	{
-		if (feof(fprvi))
+		if (A[i] == x)
 		{
-			fscanf(fdrugi, "%d", &drugi);
-			rezNiz[i++] = drugi;
+			for (j = i; j < N - 1; j++)
+				A[j] = A[j + 1];
+			N--;
 		}
-		else if (feof(fdrugi))
+		else if (A[i] == y)
 		{
-			fscanf(fprvi, "%d", &prvi);
-			rezNiz[i++] = prvi;
+			A[i] = z;
+			i++;
 		}
 		else
-		{
-			fscanf(fdrugi, "%d", &drugi);
-			fscanf(fprvi, "%d", &prvi);
-			if (prvi < drugi)
-			{
-				rezNiz[i++] = prvi;
-				rezNiz[i++] = drugi;
-			}
-			else
-			{
-				rezNiz[i++] = drugi;
-				rezNiz[i++] = prvi;
-			}
-		}
+			i++;
 	}
-	fclose(fprvi);
-	fclose(fdrugi);
-	for (j = 0; j < i; j++)
-	{
-		printf("%d ", rezNiz[j]);
-	}
-	return 0;
+	for (i = 0; i < N; i++)
+		printf("%d ", A[i]);
 }
