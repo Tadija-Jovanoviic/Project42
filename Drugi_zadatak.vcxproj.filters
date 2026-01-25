@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="drugi3.2.22.c">
+    <ClCompile Include="drugi6.6.22.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
