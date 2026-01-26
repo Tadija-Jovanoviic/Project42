@@ -1,3 +1,5 @@
+// bilo bi super da na pocetku programa u komentaru stavis text zadatka, lekse cemo da pratimo sta se radi u code
+
 #include "stdio.h"
 void main()
 {
@@ -9,7 +11,23 @@ void main()
 		scanf_s("%d", &A[i]);
 	printf("Unesite redom vrednosti za x, y i z:\n");
 	scanf_s("%d%d%d", &x, &y, &z);
-	i = 0;
+	
+	// ova while petlja je mogla da bude zapisana i kao for petlja
+
+	// ovo je potpuno ekvivalentno (while <=> for)
+	// int i = 0;
+	// while (i < N)
+	// {
+	//    ....
+	//    i++;
+	// }
+		
+	// for (i = 0; i < N; i++)
+	// {
+	//   ...
+	// }
+	
+	i = 0;	
 	while (i < N)
 	{
 		if (A[i] == x)
