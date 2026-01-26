@@ -1,3 +1,9 @@
+/* na programskom jeziku C napisati
+program koji iz unetog niza A briše sva pojavljivanja broja x, dok sva pojavljivanja broja y menja
+brojem z. Korisnik unosi dužinu niza, elemente niza i vrednosti x, y i z. Prikazati niz nakon
+transformacije. */
+
+
 // bilo bi super da na pocetku programa u komentaru stavis text zadatka, lekse cemo da pratimo sta se radi u code
 
 #include "stdio.h"
