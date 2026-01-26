@@ -7,6 +7,8 @@ matrice A, uključujući i taj element. Prilikom izračunavanja prosečne vredno
 koji postoje oko tekućeg elementa. Prikazati matricu B nakon generisanja.
 Primer za K = 1 i N = 4. */
 
+// lele, bas su ga zabiberili :)
+
 
 
 
@@ -23,6 +25,7 @@ int main() {
 		for (j = 0; j < n; j++)
 			scanf_s("%d", &A[i][j]);
 	for (i = 0; i < n; i++)
+	// ovde fali otvorena viticasta zagrada (code prolazi kompajliranje, ali nije citljiv)		
 		for (j = 0; j < n; j++)
 		{
 			suma = 0;
@@ -38,6 +41,7 @@ int main() {
 			prosek = suma / brEl;
 			B[i][j] = prosek;
 		}
+	// ovde bi trebalo da se zatvori viticasta odozgo
 	for (i = 0; i < n; i++)
 	{
 		for (j = 0; j < n; j++)
