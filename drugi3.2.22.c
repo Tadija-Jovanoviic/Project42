@@ -1,3 +1,11 @@
+/* na programskom jeziku C napisati
+strukturni program koji formira niz celih brojeva na osnovu podataka iz fajlova prvi.txt i drugi.txt.
+Program čita po jedan ceo broj iz oba fajla i dodaje ih u niz tako da prvo doda manji pa onda veći
+broj. Ukoliko u jednom fajlu ima više elemenata u odnosu na drugi, te elementa nadovezati na
+kreirani niz. Prikazati niz nakon kreiranja.
+ */
+
+
 // Ovaj primer odlicno ilustruje rad sa fajlovima
 // potrudi se da ga razumes i upamtis
 
