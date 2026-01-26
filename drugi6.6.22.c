@@ -1,3 +1,6 @@
+// ne znam sta se tacno trazi u zadatku, ali 4 ugnjezdene petlje mi deluju kao overkill 
+// mozda je zadatak stvarno zajeban, pa je neophodno
+
 #include <stdio.h>
 int main() {
 	int A[20][20], n, k, i, j, p, q, brEl;
