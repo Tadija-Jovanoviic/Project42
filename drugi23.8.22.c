@@ -6,7 +6,7 @@ elemente niza zadaje korisnik. Prikazati niz nakon unosa i transformacije.
 */
 
 
-
+#include <stdio.h>
 #include <string.h>
 int main()
 {
