@@ -1,0 +1,28 @@
+# Visual Studio
+.vs/
+x64/
+Debug/
+Release/
+*.user
+*.suo
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio cache/options
+.vs/
+*.vsidx
+*.vspscc
+*.vsp
+*.vspx
+
+# Other
+*.exe
+*.obj
+*.pdb
+*.ilk
+*.log
