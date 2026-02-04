@@ -10,8 +10,8 @@ N = 5
 AN = 3.4 1.3 4.8 8.6 6.9
 BN = 3.4 6.9 8.6 4.8 1.3
 */
-
-main()
+#include<stdio.h>
+int main()
 {
 	int n, i, j;
 	float a[50], t, b[50];
