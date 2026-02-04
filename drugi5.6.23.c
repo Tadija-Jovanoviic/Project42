@@ -11,43 +11,34 @@ AN = 3.4 1.3 4.8 8.6 6.9
 BN = 3.4 6.9 8.6 4.8 1.3
 */
 
-#include <stdio.h>
-int main()
+main()
 {
-	float x, y;
-	int oblastX = 0, oblastY = 0, oblastZ = 0, oblastOstalo = 0, k, AB, BC, CA;
-	char oblast;
-	do
+	int n, i, j;
+	float a[50], t, b[50];
+	scanf("%d", &n);
+	for (i = 0; i < n; i++)
+		scanf("%f", &a[i]);
+	for (i = 0; i < n - 1; i++)
+		for (j = 0; j < n - i - 1; j++)
+		{
+			if (a[j + 1] > a[j])
+			{
+				t = a[j];
+				a[j] = a[j + 1];
+				a[j + 1] = t;
+			}
+		}
+	printf("\n");
+	j = 0;
+	for (i = 0; i < n; i++)
 	{
-		printf("Unesite koordinate tacke: ");
-		scanf("%f%f", &x, &y);
-		k = x * x + (y - 1) * (y - 1) < 9;
-		if (k && y > x + 4)
-		{
-			oblast = 'X';
-			oblastX++;
-		}
-		else if (k && y < 1 && y>0 && x > 0)
-		{
-			oblast = 'Y';
-			oblastY++;
-		}
-		else if (k && y < 0 && x < 0)
-		{
-			oblast = 'Z';
-			oblastZ++;
-		}
+		b[n / 2 + j] = a[i];
+		if (j < 0)
+			j = -j;
 		else
-		{
-			oblast = '*';
-			oblastOstalo++;
-		}
-		printf("Tacka (%f, %f) pripada oblasti %c.\n", x, y, oblast);
-		AB = y == x + 4 && x >= -3 && x <= 0;
-		BC = y == 1 && x >= -3 && x <= 3;
-		CA = y == -x + 4 && x >= 0 && x <= 3;
-	} while (!AB && !BC && !CA);
-	printf("Broj tacaka po oblastima:\nX = %d\nY = %d\nZ = %d\n* = %d\n", oblastX, oblastY,
-		oblastZ, oblastOstalo);
-	return 0;
+			j = -j - 1;
+	}
+	for (i = 0; i < n; i++)
+		printf("%f\t", b[i]);
+	system("pause");
 }
